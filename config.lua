@@ -3,94 +3,67 @@ Config.MinimumDrugSalePolice = 2
 
 Config.Products = {
     [1] = {
-        name = "weed_white-widow",
-        price = 15,
+        name = "weed_white-widow_seed",
+        price = 200,
         amount = 150,
         info = {},
         type = "item",
         slot = 1,
-        minrep = 0,
+        minrep = 10,
     },
     [2] = {
-        name = "weed_skunk",
-        price = 15,
+        name = "weed_skunk_seed",
+        price = 220,
         amount = 150,
         info = {},
         type = "item",
         slot = 2,
-        minrep = 20,
+        minrep = 0,
     },
     [3] = {
-        name = "weed_purple-haze",
-        price = 15,
+        name = "weed_purple-haze_seed",
+        price = 260,
         amount = 150,
         info = {},
         type = "item",
         slot = 3,
-        minrep = 40,
+        minrep = 25,
     },
     [4] = {
-        name = "weed_og-kush",
-        price = 15,
+        name = "weed_og-kush_seed",
+        price = 280,
         amount = 150,
         info = {},
         type = "item",
         slot = 4,
-        minrep = 60,
+        minrep = 50,
     },
     [5] = {
-        name = "weed_amnesia",
-        price = 15,
+        name = "weed_amnesia_seed",
+        price = 300,
         amount = 150,
         info = {},
         type = "item",
         slot = 5,
-        minrep = 80,
+        minrep = 100,
     },
     [6] = {
-        name = "weed_white-widow_seed",
-        price = 15,
-        amount = 150,
+        name = "watercan",
+        price = 50,
+        amount = 500,
         info = {},
         type = "item",
         slot = 6,
-        minrep = 100,
+        minrep = 0,
     },
     [7] = {
-        name = "weed_skunk_seed",
-        price = 15,
-        amount = 150,
+        name = "weed_nutrition",
+        price = 1500,
+        amount = 100,
         info = {},
         type = "item",
         slot = 7,
-        minrep = 120,
-    },
-    [8] = {
-        name = "weed_purple-haze_seed",
-        price = 15,
-        amount = 150,
-        info = {},
-        type = "item",
-        slot = 8,
-        minrep = 140,
-    },
-    [9] = {
-        name = "weed_og-kush_seed",
-        price = 15,
-        amount = 150,
-        info = {},
-        type = "item",
-        slot = 9,
-        minrep = 160,
-    },
-    [10] = {
-        name = "weed_amnesia_seed",
-        price = 15,
-        amount = 150,
-        info = {},
-        type = "item",
-        slot = 10,
-        minrep = 180,
+        minrep = 0,
     },
 }
 
@@ -105,7 +78,8 @@ Config.CornerSellingDrugsList = {
     "weed_ak47",
     "crack_baggy",
     "cokebaggy",
-    "meth"
+    "meth",
+    "oxy"
 }
 
 Config.DrugsPrice = {
@@ -134,16 +108,20 @@ Config.DrugsPrice = {
         max = 40,
     },
     ["crack_baggy"] = {
-        min = 18,
-        max = 34,
+        min = 45,
+        max = 200,
     },
     ["cokebaggy"] = {
         min = 18,
-        max = 37,
+        max = 107,
     },
     ["meth"] = {
+        min = 100,
+        max = 300,
+    },
+    ["oxy"] = {
         min = 18,
-        max = 40,
+        max = 75,
     },
 }
 
@@ -158,7 +136,7 @@ Config.DeliveryLocations = {
     },
     [3] = {
         ["label"] = "Taxi",
-	["coords"] = vector3(882.67, -160.26, 77.11),
+	["coords"] = vector3(894.8, -179.63, 74.7),
     },
     [4] = {
         ["label"] = "Resort",
@@ -167,6 +145,46 @@ Config.DeliveryLocations = {
     [5] = {
         ["label"] = "Bahama Mamas",
 	["coords"] = vector3(-1383.1, -639.99, 28.67),
+    },
+    [6] = {
+        ["label"] = "Tequi-La-La",
+	["coords"] = vector3(-566.14, 295.73, 83.06),
+    },
+    [7] = {
+        ["label"] = "Random House",
+	["coords"] = vector3(1532.02, 1728.12, 109.92),
+    },
+    [8] = {
+        ["label"] = "Rebel Radio",
+	["coords"] = vector3(732.47, 2523.52, 73.37),
+    },
+    [9] = {
+        ["label"] = "Route 68",
+	["coords"] = vector3(-1123.43, 2682.73, 18.75),
+    },
+    [10] = {
+        ["label"] = "Bluffs",
+	["coords"] = vector3(-2797.75, 1431.8, 100.93),
+    },
+    [11] = {
+        ["label"] = "Stab City",
+	["coords"] = vector3(8.48, 3686.5, 40.18),
+    },
+    [12] = {
+        ["label"] = "Sandy Shores",
+	["coords"] = vector3(1930.12, 3721.41, 32.82),
+    },
+    [13] = {
+        ["label"] = "Gas Station",
+	["coords"] = vector3(2546.42, 385.58, 108.62),
+    },
+    [14] = {
+        ["label"] = "Lodges",
+	["coords"] = vector3(1374.04, 4381.06, 45.12),
+    },
+    [15] = {
+        ["label"] = "Vinewood Hills",
+	["coords"] = vector3(-999.54, 816.93, 173.05),
     },
 }
 
@@ -178,6 +196,13 @@ Config.CornerSellingZones = {
             ["max"] = 18,
         },
     },
+    [2] = {
+        ["coords"] = vector3(-1734.06, -112.93, 12.95),
+            ["time"] = {
+                ["min"] = 12,
+                ["max"] = 18,
+            },
+        },
 }
 
 Config.DeliveryItems = {

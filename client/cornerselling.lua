@@ -270,7 +270,7 @@ CreateThread(function()
                 end
             end
             local startDist = #(startLocation - coords)
-            if startDist > 10 then
+            if startDist > 50 then
                 toFarAway()
             end
         end
