@@ -27,7 +27,25 @@ end
 
 local function PoliceCall()
     if Config.PoliceCallChance <= math.random(1, 100) then
-        TriggerServerEvent('police:server:policeAlert', 'Drug sale in progress')
+        --TriggerServerEvent('police:server:policeAlert', 'Drug sale in progress')
+        local data = exports['cd_dispatch']:GetPlayerInfo()
+        TriggerServerEvent('cd_dispatch:AddNotification', {
+            job_table = {'police'}, 
+            coords = data.coords,
+            title = '10-17 - Suspicious Persons',
+            message = 'A suspicious '..data.sex..' near '..data.street..".", 
+            flash = 1,
+            unique_id = tostring(math.random(0000000,9999999)),
+            blip = {
+                sprite = 58, 
+                scale = 1.2, 
+                colour = 59,
+                flashes = true, 
+                text = '10-17 - Suspicious Persons',
+                time = (5*60*1000),
+                sound = 1,
+            }
+        })
     end
 end
 
